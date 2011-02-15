@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="gab" xml:space="preserve">
+        <code>Yep ca marche en HTML</code>
+        <description>Une description mais ca ne me sert à rien.</description>
+    </codetemplate>
+    <codetemplate abbreviation="test" xml:space="preserve">
+        <code>Ceci est un test et devrai supprimer l'existant</code>
+        <description></description>
+    </codetemplate>
+    <codetemplate abbreviation="pipo" xml:space="preserve">
+        <code>encore plus de contenu</code>
+        <description></description>
+    </codetemplate>
+</codetemplates>
