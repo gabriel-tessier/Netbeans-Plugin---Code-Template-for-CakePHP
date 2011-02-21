@@ -1,0 +1,11 @@
+1 Go to build/ folder
+2 download the org-cakephp-codetemplate.nbm file (right click then save link as)
+3 open your netbeans
+4 Go to options Tools menu then plug-ins
+5 In the new window go to Downloaded tab
+6 Select the *.nbm you've just download
+7 install it
+
+Based on the work of evilbloodydemon
+Check the original project here : 
+https://github.com/evilbloodydemon/netbeans-cakephp-bundle
