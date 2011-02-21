@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cakephp.codetemplate
+OpenIDE-Module-Layer: org/cakephp/codetemplate/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/cakephp/codetemplate/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
