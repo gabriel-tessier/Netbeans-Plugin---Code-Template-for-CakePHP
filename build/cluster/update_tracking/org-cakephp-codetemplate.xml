@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module codename="org.cakephp.codetemplate">
-    <module_version install_time="1298325861232" last="true" origin="installer" specification_version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.cakephp.codetemplate">
+    <module_version install_time="1377934197221" last="true" origin="installer" specification_version="1.0">
         <file crc="2128527808" name="config/Modules/org-cakephp-codetemplate.xml"/>
-        <file crc="923176561" name="modules/org-cakephp-codetemplate.jar"/>
+        <file crc="181243330" name="modules/org-cakephp-codetemplate.jar"/>
     </module_version>
 </module>

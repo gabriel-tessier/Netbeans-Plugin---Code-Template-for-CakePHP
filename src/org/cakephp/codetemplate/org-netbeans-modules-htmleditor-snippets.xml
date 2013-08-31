@@ -104,16 +104,20 @@
 ${cursor}]]></code>
         <description>Display echo(... of a single value</description>
     </codetemplate>
-    <codetemplate abbreviation="echod" xml:space="preserve">
+    <codetemplate abbreviation="echoa" xml:space="preserve">
         <code><![CDATA[<?php echo ${data}['${Model}']['${field}']; ?>
 ${cursor}]]></code>
         <description>Display echo(... of an array value</description>
     </codetemplate>
-    <codetemplate abbreviation="ren" xml:space="preserve">
+    <codetemplate abbreviation="ele" xml:space="preserve">
         <code><![CDATA[<?php echo $this->element('${element}'${cursor}); ?>]]></code>
         <description>Display the element function</description>
     </codetemplate>
-                                    
+    <codetemplate abbreviation="elec" xml:space="preserve">
+        <code><![CDATA[<?php echo $this->element('${element}'${cursor}, array(), array('cache' => true)); ?>]]></code>
+        <description>Display the element function with cache option</description>
+    </codetemplate>
+                                                   
     <!--Paginator-->
     <codetemplate abbreviation="pnum" xml:space="preserve">
         <code><![CDATA[<?php echo $paginator->numbers(${cursor}); ?>]]></code>

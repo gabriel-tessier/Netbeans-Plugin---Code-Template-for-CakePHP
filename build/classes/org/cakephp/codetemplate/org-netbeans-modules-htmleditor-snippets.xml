@@ -1,177 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
-    <codetemplate abbreviation="hid" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->hidden('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="char" xml:space="preserve">
-        <code><![CDATA[<?php echo $html->charset(${charset}); ?>
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="img" xml:space="preserve">
-        <code><![CDATA[<?php echo $html->image('${image.ext}', array('alt'=>'${altText}'${cursor})); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="echo" xml:space="preserve">
-        <code><![CDATA[<?php echo ${data}; ?>
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="merid" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->meridian('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="texta" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->textarea('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="pnum" xml:space="preserve">
-        <code><![CDATA[<?php echo $paginator->numbers(${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="file" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->file('${Model}.${field}'${cursor}); ?>
-]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="jobj" xml:space="preserve">
-        <code><![CDATA[<?php echo $javascript->object(${data}); ?>
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="year" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->year('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="else" xml:space="preserve">
-        <code><![CDATA[<?php else: ?>
-	${cursor}  	 
-<?php endif; ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="text" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->text('${Model}.${field}'${cursor}); ?>
-]]></code>
-    </codetemplate>
+    <!--Form-->
     <codetemplate abbreviation="form" xml:space="preserve">
         <code><![CDATA[<?php echo $form->create('${Model}'); ?>
 	${cursor}
 <?php echo $form->end(); ?>]]></code>
+        <description>Display form and endform</description>
     </codetemplate>
-    <codetemplate abbreviation="submit" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->submit(${Submit}${cursor}}); ?>]]></code>
+    <codetemplate abbreviation="formc" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->create('${Model}'${cursor}); ?>]]></code>
+    </codetemplate>
+    <description>Display only form not endform</description>
+    <codetemplate abbreviation="hid" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->hidden('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form hidden field</description>
+    </codetemplate>
+    <codetemplate abbreviation="err" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->error('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form error field</description>
+    </codetemplate>
+    <codetemplate abbreviation="texta" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->textarea('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form textarea field</description>
+    </codetemplate>
+    <codetemplate abbreviation="merid" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->meridian('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form meridian field</description>
+    </codetemplate>
+    <codetemplate abbreviation="text" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->text('${Model}.${field}'${cursor}); ?>
+]]></code>
+        <description>Display form text field</description>
     </codetemplate>
     <codetemplate abbreviation="select" xml:space="preserve">
         <code><![CDATA[<?php echo $form->select('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form select field</description>
     </codetemplate>
-    <codetemplate abbreviation="plink" xml:space="preserve">
-        <code><![CDATA[<?php echo $paginator->link('${title}', array(${cursor})); ?>]]></code>
+    <codetemplate abbreviation="date" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->dateTime('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form date field</description>
     </codetemplate>
-    <codetemplate abbreviation="ppp" xml:space="preserve">
-        <code><![CDATA[<?php
-    ${cursor}
-?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="label" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->label('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="jlink" xml:space="preserve">
-        <code><![CDATA[<?php echo $javascript->link(array('${filename}')${cursor}); ?>]]></code>
+    <codetemplate abbreviation="day" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->day('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form day field</description>
     </codetemplate>
     <codetemplate abbreviation="month" xml:space="preserve">
         <code><![CDATA[<?php echo $form->month('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form month field</description>
+    </codetemplate>    
+    <codetemplate abbreviation="year" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->year('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form year field</description>
+    </codetemplate>
+    <codetemplate abbreviation="hour" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->hour('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form hour field</description>
+    </codetemplate>
+    <codetemplate abbreviation="min" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->minute('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form minute field</description>
+    </codetemplate>
+    <codetemplate abbreviation="file" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->file('${Model}.${field}'${cursor}); ?>
+]]></code>
+        <description>Display form file field</description>
+    </codetemplate>
+    <codetemplate abbreviation="label" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->label('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form label field</description>
+    </codetemplate>
+    
+    <codetemplate abbreviation="check" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->checkbox('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form checkbox field</description>
+    </codetemplate>
+    
+    <codetemplate abbreviation="in" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->input('${Model}.${field}'${cursor}); ?>
+            <description>Display form input field</description>
+]]></code>
+    </codetemplate>
+    <codetemplate abbreviation="pass" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->password('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form password field</description>
+    </codetemplate>
+    <codetemplate abbreviation="radio" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->radio('${Model}.${field}'${cursor}); ?>]]></code>
+        <description>Display form radio field</description>
+    </codetemplate>
+    <codetemplate abbreviation="submit" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->submit(${Submit}${cursor}}); ?>]]></code>
+        <description>Display form submit button</description>
+    </codetemplate>
+    <codetemplate abbreviation="forme" xml:space="preserve">
+        <code><![CDATA[<?php echo $form->end(${cursor}); ?>]]></code>
+        <description>Display only end form</description>
+    </codetemplate>
+    
+    <!--Data-->   
+    <codetemplate abbreviation="echo" xml:space="preserve">
+        <code><![CDATA[<?php echo ${data}; ?>
+${cursor}]]></code>
+        <description>Display echo(... of a single value</description>
+    </codetemplate>
+    <codetemplate abbreviation="echod" xml:space="preserve">
+        <code><![CDATA[<?php echo ${data}['${Model}']['${field}']; ?>
+${cursor}]]></code>
+        <description>Display echo(... of an array value</description>
+    </codetemplate>
+    <codetemplate abbreviation="ren" xml:space="preserve">
+        <code><![CDATA[<?php echo $this->element('${element}'${cursor}); ?>]]></code>
+        <description>Display the element function</description>
+    </codetemplate>
+                                    
+    <!--Paginator-->
+    <codetemplate abbreviation="pnum" xml:space="preserve">
+        <code><![CDATA[<?php echo $paginator->numbers(${cursor}); ?>]]></code>
+        <description>Display paginator numbers</description>
+    </codetemplate>
+    <codetemplate abbreviation="plink" xml:space="preserve">
+        <code><![CDATA[<?php echo $paginator->link('${title}', array(${cursor})); ?>]]></code>
+        <description>Display paginator link</description>
+    </codetemplate>
+    <codetemplate abbreviation="pcount" xml:space="preserve">
+        <code><![CDATA[<?php echo $paginator->counter(${cursor}); ?>]]></code>
+        <description>Display paginator counter</description>
+    </codetemplate>
+    
+    <!--Javascript-->
+    <codetemplate abbreviation="jobj" xml:space="preserve">
+        <code><![CDATA[<?php echo $javascript->object(${data}); ?>
+${cursor}]]></code>
+        <description>Display echo $javascript->object(...</description>
+    </codetemplate>
+    <codetemplate abbreviation="jlink" xml:space="preserve">
+        <code><![CDATA[<?php echo $javascript->link(array('${filename}')${cursor}); ?>]]></code>
+        <description>Display echo $javascript->link(...</description>
+    </codetemplate>
+    <codetemplate abbreviation="jval" xml:space="preserve">
+        <code><![CDATA[<?php echo $javascript->value(${var}); ?>
+${cursor}]]></code>
+        <description>Display echo $javascript->value(...</description>
+    </codetemplate>   
+
+    <!--Php function if else for etc...-->
+    <codetemplate abbreviation="if" xml:space="preserve">
+        <code><![CDATA[<?php if (${condition}): ?>
+	${cursor}  	 
+<?php endif; ?>]]></code>
+    <description>Display if function</description>
+    </codetemplate>
+    <codetemplate abbreviation="else" xml:space="preserve">
+        <code><![CDATA[<?php if (${condition}): ?>
+        ${cursor}
+        <?php else: ?>
+	
+<?php endif; ?>]]></code>
+    <description>Display if function with else</description>
     </codetemplate>
     <codetemplate abbreviation="elseif" xml:space="preserve">
         <code><![CDATA[<?php elseif (${condition}): ?>
 	${cursor} 
 <?php endif; ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="sflash" xml:space="preserve">
-        <code><![CDATA[<?php echo $session->flash(${key}); ?>
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="day" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->day('${Model}.${field}'${cursor}); ?>]]></code>
+    <description>Display elseif function</description>
     </codetemplate>
     <codetemplate abbreviation="each" xml:space="preserve">
         <code><![CDATA[<?php foreach ($$${array} as $$${key}=>$$${value}): ?>
 	${cursor}  	 
 <?php endforeach; ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="css" xml:space="preserve">
-        <code><![CDATA[<?php echo $html->css(array('${filename}')${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="link" xml:space="preserve">
-        <code><![CDATA[<?php echo $html->link(${text}, array('controller' => '${controller}', 'action' => '${action}'${cursor})); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="div" xml:space="preserve">
-        <code><![CDATA[<?php echo $html->div(${class}); ?>
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="date" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->dateTime('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="meta" xml:space="preserve">
-        <code><![CDATA[<?php echo $html->meta('${type}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="echod" xml:space="preserve">
-        <code><![CDATA[<?php echo ${data}['${Model}']['${field}']; ?>
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="forme" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->end(${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="style" xml:space="preserve">
-        <code><![CDATA[<?php echo $html->style(${style)}${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="if" xml:space="preserve">
-        <code><![CDATA[<?php if (${condition}): ?>
-	${cursor}  	 
-<?php endif; ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="jval" xml:space="preserve">
-        <code><![CDATA[<?php echo $javascript->value(${var}); ?>
-${cursor}]]></code>
+    <description>Display foreach function with "key=>value"</description>
     </codetemplate>
     <codetemplate abbreviation="fore" xml:space="preserve">
         <code><![CDATA[<?php foreach($$${items} as $$${item}): ?>
     ${cursor}
 <?php endforeach; ?>
 ]]></code>
+    <description>Display foreach function with "items as item"</description>
+    </codetemplate>
+
+    <!--PHP-->
+    <codetemplate abbreviation="pp" xml:space="preserve">
+        <code><![CDATA[<?php 
+    ${cursor};
+?>]]></code>
+        <description>Display <?php ?></description>
+    </codetemplate>
+    <codetemplate abbreviation="ppp" xml:space="preserve">
+        <code><![CDATA[<?php
+    ${cursor}
+?>]]></code>
+    <description>Display <?php ?> for spppeed coder</description>
+    </codetemplate>
+
+    <!--Session-->
+    <codetemplate abbreviation="sflash" xml:space="preserve">
+        <code><![CDATA[<?php echo $session->flash(${key}); ?>
+${cursor}]]></code>
+    <description>Display echo $session->flash(...</description>
     </codetemplate>
     <codetemplate abbreviation="serr" xml:space="preserve">
         <code><![CDATA[<?php echo $session->error(); ?>
 ${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="min" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->minute('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="check" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->checkbox('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="hour" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->hour('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="formc" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->create('${Model}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="in" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->input('${Model}.${field}'${cursor}); ?>
-]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="pass" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->password('${Model}.${field}'${cursor}); ?>]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="pcount" xml:space="preserve">
-        <code><![CDATA[<?php echo $paginator->counter(${cursor}); ?>]]></code>
+    <description>Display echo $session->error()</description>
     </codetemplate>
     <codetemplate abbreviation="sread" xml:space="preserve">
         <code><![CDATA[<?php echo $session->read('${keyName}'); ?>
 ${cursor}]]></code>
+    <description>Display echo $session->read(...</description>
     </codetemplate>
-    <codetemplate abbreviation="err" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->error('${Model}.${field}'${cursor}); ?>]]></code>
+    
+    <!--Html-->
+    <codetemplate abbreviation="css" xml:space="preserve">
+        <code><![CDATA[<?php echo $html->css(array('${filename}')${cursor}); ?>]]></code>
+        <description>Display $html->css(</description>
+    </codetemplate>
+    <codetemplate abbreviation="div" xml:space="preserve">
+        <code><![CDATA[<?php echo $html->div(${class}); ?>
+${cursor}]]></code>
+        <description>Display $html->div(</description>
+    </codetemplate>
+    <codetemplate abbreviation="meta" xml:space="preserve">
+        <code><![CDATA[<?php echo $html->meta('${type}'${cursor}); ?>]]></code>
+        <description>Display $html->meta(</description>
+    </codetemplate>
+    <codetemplate abbreviation="style" xml:space="preserve">
+        <code><![CDATA[<?php echo $html->style(${style)}${cursor}); ?>]]></code>
+        <description>Display $html->style(</description>
     </codetemplate>
     <codetemplate abbreviation="doc" xml:space="preserve">
         <code><![CDATA[<?php echo $html->doctype('${xhtml-strict}'); ?>
 ${cursor}]]></code>
+        <description>Display $html->doctype(</description>
     </codetemplate>
-    <codetemplate abbreviation="ren" xml:space="preserve">
-        <code><![CDATA[<?php echo $this->element('${element}'${cursor}); ?>]]></code>
+    <codetemplate abbreviation="link" xml:space="preserve">
+        <code><![CDATA[<?php echo $html->link(${text}, array('controller' => '${controller}', 'action' => '${action}'${cursor})); ?>]]></code>
+        <description>Display $html->link(</description>
     </codetemplate>
-    <codetemplate abbreviation="radio" xml:space="preserve">
-        <code><![CDATA[<?php echo $form->radio('${Model}.${field}'${cursor}); ?>]]></code>
+    <codetemplate abbreviation="img" xml:space="preserve">
+        <code><![CDATA[<?php echo $html->image('${image.ext}', array('alt'=>'${altText}'${cursor})); ?>]]></code>
+        <description>Display $html->image(</description>
     </codetemplate>
     <codetemplate abbreviation="imgl" xml:space="preserve">
         <code><![CDATA[<?php echo $html->link(
@@ -180,8 +248,11 @@ ${cursor}]]></code>
     ${array()}, ${null}, ${false}
 ); ?>
 ${cursor}]]></code>
+        <description>Display $html->link with img(</description>
     </codetemplate>
-    <codetemplate abbreviation="pp" xml:space="preserve">
-        <code><![CDATA[<?php ${cursor}; ?>]]></code>
+    <codetemplate abbreviation="char" xml:space="preserve">
+        <code><![CDATA[<?php echo $html->charset(${charset}); ?>
+${cursor}]]></code>
+        <description>Display $html->charset(</description>
     </codetemplate>
 </codetemplates>
