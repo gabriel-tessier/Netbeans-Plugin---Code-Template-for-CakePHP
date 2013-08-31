@@ -1,105 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
+    <!--Controller data-->
     <codetemplate abbreviation="set" xml:space="preserve">
         <code><![CDATA[$this->set('${name}', $$${var});
         ${cursor}]]></code>
+        <description>Display $this->set(... with the latest affected var and format it</description>
     </codetemplate>
     <codetemplate abbreviation="data" xml:space="preserve">
         <code><![CDATA[$this->data]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="re" xml:space="preserve">
-        <code><![CDATA[$this->redirect(array('controller' => '${controller}', 'action' => '${action}'${cursor}));]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="swrite" xml:space="preserve">
-        <code><![CDATA[$this->Session->write('${Controller}.${key}', ${value});
-${cursor}]]></code>
+        <description>Display $this->data</description>
     </codetemplate>
     <codetemplate abbreviation="de" xml:space="preserve">
         <code><![CDATA[debug ($$${data});]]></code>
+        <description>Display debug(... with the latest affected var</description>
     </codetemplate>
-    <codetemplate abbreviation="after" xml:space="preserve">
-        <code><![CDATA[function afterFilter() {
-	${cursor}
-}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="ra" xml:space="preserve">
-        <code><![CDATA[$this->requestAction(array('controller' => '${controller}', 'action' => '${action}'${cursor}));]]></code>
+            
+    <!--Session-->
+    <codetemplate abbreviation="swrite" xml:space="preserve">
+        <code><![CDATA[$this->Session->write('${Controller}.${key}', ${value});
+${cursor}]]></code>
+        <description>Display $this->Session->write(...  </description>
     </codetemplate>
     <codetemplate abbreviation="scheck" xml:space="preserve">
         <code><![CDATA[$this->Session->check('${Controller}.${key}');
 ${cursor}]]></code>
+        <description>Display $this->Session->check(... </description>
     </codetemplate>
     <codetemplate abbreviation="serr" xml:space="preserve">
         <code><![CDATA[$this->Session->error();
 ${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="find" xml:space="preserve">
-        <code><![CDATA[$this->${ModelName}->find('${all}', array(
-	${cursor}
-));
-]]></code>
+        <description>Display $this->Session->error() </description>
     </codetemplate>
     <codetemplate abbreviation="sid" xml:space="preserve">
         <code><![CDATA[$this->Session->id();
 ${cursor}]]></code>
+<description>Display $this->Session->id() </description>
     </codetemplate>
-    <codetemplate abbreviation="app" xml:space="preserve">
-        <code><![CDATA[App::import('${LibraryName}', '${ClassName}'});
+    <codetemplate abbreviation="svalid" xml:space="preserve">
+        <code><![CDATA[$this->Session->valid();
 ${cursor}]]></code>
+        <description>Display $this->Session->valid()  </description>
+    </codetemplate>
+    <codetemplate abbreviation="sread" xml:space="preserve">
+        <code><![CDATA[$this->Session->read('${Controller}.${key}');
+${cursor}]]></code>
+    <description>Display $this->Session->read(...  </description>
+    </codetemplate>
+    <codetemplate abbreviation="sres" xml:space="preserve">
+        <code><![CDATA[$this->Session->restore();
+${cursor}]]></code>
+    <description>Display $this->Session->restore(...  </description>
+    </codetemplate>
+    <codetemplate abbreviation="sdel" xml:space="preserve">
+        <code><![CDATA[$this->Session->del('${Controller}.${key}');
+${cursor}]]></code>
+    <description>Display $this->Session->del(...  </description>
+    </codetemplate>
+    <codetemplate abbreviation="sdes" xml:space="preserve">
+        <code><![CDATA[$this->Session->destroy();
+${cursor}]]></code>
+    <description>Display $this->Session->destroy(...  </description>
+    </codetemplate>
+    <codetemplate abbreviation="sflash" xml:space="preserve">
+        <code><![CDATA[$this->Session->setFlash(${message});]]></code>
+        <description>Display $this->Session->setFlash(...  </description>
+    </codetemplate>
+
+    <!--Function-->
+    <codetemplate abbreviation="ra" xml:space="preserve">
+        <code><![CDATA[$this->requestAction(array('controller' => '${controller}', 'action' => '${action}'${cursor}));]]></code>
+        <description>Display $this->requestAction(array('controller'... and action </description>
+    </codetemplate>
+    <codetemplate abbreviation="re" xml:space="preserve">
+        <code><![CDATA[$this->redirect(array('controller' => '${controller}', 'action' => '${action}'${cursor}));]]></code>
+        <description>Display $this->redirect(array('controller' =>... and action</description>
+    </codetemplate>
+    <codetemplate abbreviation="ii" xml:space="preserve">
+        <code><![CDATA[__('${key}', true)]]></code>
+        <description>Display for i18n function(...</description>
+    </codetemplate>
+    <codetemplate abbreviation="ren" xml:space="preserve">
+        <code><![CDATA[$this->render('${action}'${cursor});]]></code>
+        <description>Display for render function(...</description>
+    </codetemplate>
+    
+    <!--Function skeleton-->
+    <codetemplate abbreviation="after" xml:space="preserve">
+        <code><![CDATA[function afterFilter() {
+	${cursor}
+}]]></code>
+        <description>Display the skeleton of the afterFilter function </description>
     </codetemplate>
     <codetemplate abbreviation="beforer" xml:space="preserve">
         <code><![CDATA[
 function beforeRender() {
 	${cursor}
 }]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="sres" xml:space="preserve">
-        <code><![CDATA[$this->Session->restore();
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="ii" xml:space="preserve">
-        <code><![CDATA[__('${key}', true)]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="sdel" xml:space="preserve">
-        <code><![CDATA[$this->Session->del('${Controller}.${key}');
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="sdes" xml:space="preserve">
-        <code><![CDATA[$this->Session->destroy();
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="field" xml:space="preserve">
-        <code><![CDATA[$this->${ModelName}->field('${name}', ${conditions}, ${order});
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="cr" xml:space="preserve">
-        <code><![CDATA[ClassRegistry::init('${ModelName}')${cursor};]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="configr" xml:space="preserve">
-        <code><![CDATA[Configure::read('${key}')]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="configw" xml:space="preserve">
-        <code><![CDATA[Configure::write('${key}', ${value});]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="svalid" xml:space="preserve">
-        <code><![CDATA[$this->Session->valid();
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="sread" xml:space="preserve">
-        <code><![CDATA[$this->Session->read('${Controller}.${key}');
-${cursor}]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="ren" xml:space="preserve">
-        <code><![CDATA[$this->render('${action}'${cursor});]]></code>
-    </codetemplate>
-    <codetemplate abbreviation="sflash" xml:space="preserve">
-        <code><![CDATA[$this->Session->setFlash(${message});]]></code>
+        <description>Display the skeleton of the beforeRender function </description>
     </codetemplate>
     <codetemplate abbreviation="beforef" xml:space="preserve">
         <code><![CDATA[
 function beforeFilter() {
 	${cursor}
 }]]></code>
+    <description>Display the skeleton of the beforeFilter function </description>
     </codetemplate>
+
+    <!--Model-->
+    <codetemplate abbreviation="find" xml:space="preserve">
+        <code><![CDATA[$this->${ModelName}->find('${all}', array(
+	${cursor}
+));
+]]></code>
+    <description>Display the find function </description>
+    </codetemplate>
+    <codetemplate abbreviation="field" xml:space="preserve">
+        <code><![CDATA[$this->${ModelName}->field('${name}', ${conditions}, ${order});
+${cursor}]]></code>
+    <description>Display the field function </description>
+    </codetemplate>
+    
+    <!--Constant-->
+    <codetemplate abbreviation="aimp" xml:space="preserve">
+        <code><![CDATA[App::import('${LibraryName}', '${ClassName}'});
+${cursor}]]></code>
+    <description>Display App::import(  </description>
+    </codetemplate>
+    <codetemplate abbreviation="cr" xml:space="preserve">
+        <code><![CDATA[ClassRegistry::init('${ModelName}')${cursor};]]></code>
+        <description>Display ClassRegistry::init(  </description>
+    </codetemplate>
+    <codetemplate abbreviation="configr" xml:space="preserve">
+        <code><![CDATA[Configure::read('${key}')]]></code>
+        <description>Display Configure::read(  </description>
+    </codetemplate>
+    <codetemplate abbreviation="configw" xml:space="preserve">
+        <code><![CDATA[Configure::write('${key}', ${value});]]></code>
+        <description>Display Configure::write(  </description>
+    </codetemplate>
+    
 </codetemplates>
